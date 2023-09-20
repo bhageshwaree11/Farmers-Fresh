@@ -1,0 +1,326 @@
+html, body
+{
+margin-left: 4%;
+margin-right: 4%;
+margin-top: 0%;
+font-family: 'Times New Roman', Times, serif;
+}
+
+/* header Starts */
+.header
+{
+   background-color: darkgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-radius: 9px;
+}
+
+.titlename h1
+{
+    width: 500px;
+    font-family: "Indie Flower", sans-serif;
+    font-size: 60px;
+}
+.titlename a{
+    text-decoration: none;
+    color: greenyellow;
+    
+}
+.topRow
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+    color: white;
+}
+#button-openform
+{
+    background-color: transparent;
+    border: none;
+    color: white;
+
+}
+#button-openform:hover
+{
+   color: yellowgreen;
+}
+.cart{
+    padding: 10px;
+}
+.cart a
+{
+   text-decoration: none;
+   color: white;
+  
+}
+.cart a:hover {
+   color: yellowgreen;
+  
+  }
+  @media (max-width: 768px){
+    .header
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .titlename h1
+    {
+        width: auto;
+    }
+    .topRow
+    {
+        gap: 15px; /* Reduce the gap between elements */
+        padding: 15px; /* Reduce the padding */
+        justify-content: center; /* Center the content horizontally */
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center the text */
+          
+    }
+  }
+  
+/* header ends */
+
+/* products starts */
+.products
+{
+    margin-left: 42%;
+    color: green;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+.shop
+{
+    display: grid;
+    grid-template-columns: repeat(4, 240px) ;
+    gap: 40px;
+   margin: 5%;
+    align-items: center;
+}
+.product-item
+{
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.productQty
+{
+    display: flex;
+    gap: 10px;
+   
+}
+.productQty:hover{
+    background-color: lightgreen;
+}
+
+@media (max-width: 1200px) {
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(3, 240px) ;
+    }
+}
+@media (max-width: 768px){
+    .shop{
+        display: grid;
+        grid-template-columns: repeat(1, 240px) ;
+    }
+}
+/* products ends */
+
+
+/* login form starts */
+.container-login, .container-signup, .forgetPW
+{
+    display: none;
+    
+}
+
+.closeButton, .closeButtonSignup, .closeButtonForgetPW
+{
+   position: relative;
+    left: 95%;
+}
+
+.container-login, .forgetPW
+{
+position: fixed;
+left: 30%;
+top: 20%;
+padding: 10px;
+width: 500px;
+background-color: white;
+border: 2px solid green;
+border-radius: 10px;
+}
+
+.container-signup
+{
+position: fixed;
+left: 30%;
+top: 12%;
+padding: 10px;
+
+background-color: white;
+border: 2px solid green;
+border-radius: 10px;
+ max-height: 80vh; 
+ /* overflow-y: auto; */
+ overflow-y: auto;
+ overflow-x: hidden;
+ width: 500px;
+    
+}
+   
+
+.container-login form, .container-signup form, .forgetPW form
+{
+   display: grid !important;
+   gap: 5px;
+   padding: 10px;
+}
+
+.container-login label, .container-signup label, .forgetPW label
+{
+    color: green;
+    font-size: 17px;
+}
+
+.container-login input, .container-signup input, .forgetPW input
+{
+    height: 30px;
+    background-color: transparent;
+    opacity: 0.9;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.loginbuttons
+{
+    display: flex;
+    margin: auto;
+    gap: 20px;
+}
+
+.button-login, .button-login-signup, #button-signup, .forgetPWBtn
+{
+    background-color: green;
+    width: 100px;
+    height: 40px;
+    border: 2px solid green;
+    border-radius: 5px;
+    color: white;
+    
+}
+#button-signup, .forgetPWBtn
+{
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .container-login, .container-signup, .forgetPW {
+        left: 10%; 
+        width: 80%; 
+        max-width: none; 
+    }
+}
+/* login form ends */
+
+/* footer starts */
+footer {
+    text-align: center; 
+    background-color: darkgreen; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 3px;
+  }
+  
+  .socialIcons {
+    margin-top: 10px; 
+  }
+  
+  
+  .socialIcons i {
+    font-size: 24px; 
+    margin: 0 10px; 
+  }
+  /* footer ends */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+  .shopping-cart
+  {
+
+    margin: 40px auto 0 ;
+    border: 1px solid green;
+    border-radius: 10px;
+  }
+  .shopping-cart th
+  {
+   background-color: lightgreen;
+   padding: 10px;
+   color: black;
+   
+  }
+  .shopping-cart td
+  {
+    width: 100px;
+    text-align: center;
+  }
+  .shopping-cart tr
+  {
+    border-bottom: 1px solid green;
+  }
+.decrement, .increment
+{
+    color: blue;
+}
+
+.remove
+{
+    color: red;
+}
+
+.totalBill {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+    color: green;
+  }
+.checkout
+{
+    
+    background-color: green;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.removeAll
+{
+    background-color: red;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.HomeBtn
+{
+    
+    background-color: green;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
